@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gamiecon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style_2.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="Home">
+      <nav class="nav-bar">
+        <div class="nav-container">
+          <a href="#rules" class="nav-item">RULES</a>
+          <a href="#sponsor" class="nav-item">SPONSOR</a>
+          <a href="#home" class="nav-item">Home</a>
+          <a href="#faq" class="nav-item">FAQ</a>
+          <a href="#schedule" class="nav-item">SCHEDULE</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <main id="home" class="main-container">
+        <video class="bgvideo" width="400" height="300" autoplay loop muted>
+          <source src="video/vid.mp4" type="video/mp4" />
+        </video>
+        <!-- Title -->
+        <h1 class="title"><span class="rampage">Gamiecon</span><br /></h1>
+
+        <!-- Challenge Info -->
+        <div class="challenge-info">
+          <h3>Student Game Pitch Challenge</h3>
+          <p>July - September 2025</p>
+        </div>
+
+        <!-- Countdown -->
+        <div class="countdown-section">
+          <h2 class="countdown-title">CHALLENGE ENDS IN</h2>
+          <div class="countdown-container">
+            <div class="countdown-item">
+              <div class="countdown-number" id="days">20</div>
+              <div class="countdown-label">DAYS</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-number" id="hours">00</div>
+              <div class="countdown-label">HRS</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-number" id="minutes">49</div>
+              <div class="countdown-label">MIN</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-number" id="seconds">00</div>
+              <div class="countdown-label">SEC</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Get Started Button -->
+        <a
+          href="https://forms.gle/JoB4ezwEB4DeGL3eA"
+          class="get-started-btn"
+          target="_blank"
+          >GET STARTED!</a
+        >
+
+        <!-- Submission Info -->
+        <p class="submission-info">
+          Submission link will be available in <strong>3 days, 10 hours</strong>
+        </p>
+
+        <!-- Bottom Actions -->
+        <div class="bottom-actions">
+          <a href="#" class="action-btn">
+            <!-- <span class="rules-icon"></span> -->
+            Read the Rules
+          </a>
+          <a href="#" class="action-btn">
+            Join Discord
+            <!-- <span class="discord-icon"></span> -->
+          </a>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">⌄</div>
+      </main>
+    </div>
+    <!-- <hr /> -->
+    <div class="Rules">
+      <div class="container" id="rules">
+        <!-- Guidelines Section -->
+        <section class="guidelines-section">
+          <h1 class="guidelines-title">GUIDELINES</h1>
+          <div class="guidelines-text">
+            <p>
+              Start your engines and join the Rampage Rally, our next
+              vehicle-based 3D Community Challenge. We challenge you to use the
+              provided template as a blueprint to drive your own unique creation
+              over the next 30 days.
+            </p>
+          </div>
+          <div class="guidelines-text">
+            <p>
+              Your art will be judged on
+              <strong
+                >idea/story, lighting & render quality, composition, and
+                animation</strong
+              >. Follow the rules below to guarantee your place in the "All
+              Renders" Community Montage, or push for a spot in the curated Top
+              100 Montage.
+            </p>
+          </div>
+          <div class="guidelines-text">
+            <p>
+              <strong
+                >Good luck, have fun and we'll see you at the finish
+                line!</strong
+              >
+            </p>
+          </div>
+        </section>
+
+        <!-- Rules Section -->
+        <section class="rules-section">
+          <h2 class="rules-title">RULES</h2>
+
+          <div class="rules-container">
+            <!-- Rules List -->
+            <div class="rules-left">
+              <ul class="rules-list">
+                <li class="rule-item">
+                  <span class="rule-number">01</span>
+                  <span class="rule-text"
+                    >Replace the Vehicle Proxy with your own vehicle.</span
+                  >
+                </li>
+
+                <li class="rule-item">
+                  <span class="rule-number">02</span>
+                  <span class="rule-text"
+                    >Jump the provided gap with your vehicle.</span
+                  >
+                  <div class="video-icon"></div>
+                </li>
+
+                <li class="rule-item">
+                  <span class="rule-number">03</span>
+                  <span class="rule-text"
+                    >Maintain the sense of speed and direction.</span
+                  >
+                  <div class="video-icon"></div>
+                </li>
+
+                <li class="rule-item">
+                  <span class="rule-number">04</span>
+                  <span class="rule-text"
+                    >Use the provided camera (<a href="#" class="rule-link"
+                      >more info</a
+                    >).</span
+                  >
+                  <div class="video-icon"></div>
+                </li>
+
+                <li class="rule-item">
+                  <span class="rule-number">05</span>
+                  <span class="rule-text"
+                    >One submission per artist, one artist per submission.</span
+                  >
+                </li>
+
+                <li class="rule-item">
+                  <span class="rule-number">06</span>
+                  <span class="rule-text"
+                    >You must follow the technical specifications (Name rule,
+                    resolution, frame count, file type, codex, file size)</span
+                  >
+                </li>
+
+                <li class="rule-item">
+                  <span class="rule-number">07</span>
+                  <span class="rule-text"
+                    >No generative AI is allowed. (<a href="#" class="rule-link"
+                      >more info</a
+                    >)</span
+                  >
+                </li>
+
+                <li class="rule-item">
+                  <span class="rule-number">08</span>
+                  <span class="rule-text"
+                    >Submit by Monday 1 September 2025 at 12:29 GMT+5:30 (+ 2
+                    weeks, 6 days)</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- <hr /> -->
+    <div class="sponsor">
+      <section id="sponsor">
+        <h2>Our Sponsor</h2>
+        <h3>Indian Digital Gaming Society (IDGS)</h3>
+
+        <img src="video/images.png" alt="IDGS Logo" class="sponsor-photo" />
+
+        <p>
+          The Indian Digital Gaming Society (IDGS) is dedicated to promoting and
+          supporting the growth of the digital gaming industry in India. By
+          fostering innovation, encouraging collaboration, and providing
+          resources for developers, publishers, and gamers, IDGS is helping
+          shape the future of gaming in the country.
+        </p>
+
+        <div class="social-links">
+          <a
+            href="https://www.facebook.com/gamingsociety.in/"
+            target="_blank"
+            aria-label="Facebook"
+          >
+            <img src="video/Facebook.png" alt="Facebook Icon" />
+          </a>
+
+          <a
+            href="https://www.youtube.com/@IndianDigitalGamingSociety"
+            target="_blank"
+            aria-label="Youtube"
+          >
+            <img src="video/youtube.jpg" alt="Youtube Icon" />
+          </a>
+          <a
+            href="https://gamingsociety.in/"
+            target="_blank"
+            aria-label="Website"
+          >
+            <img src="video/images.png" alt="Website Icon" />
+          </a>
+        </div>
+      </section>
+    </div>
+    <!-- <hr /> -->
+    <div class="judge">
+      <div class="container_2">
+        <h1 class="title">JUDGES</h1>
+
+        <div class="judges-grid">
+          <div class="judge">
+            <div class="judge-image">
+              <img src="video/Embright Infotech.jpg" alt="Shutter Authority" />
+            </div>
+            <h2 class="judge-name">Mr Satya</h2>
+            <p class="judge-title">Founder of Embright Infotech</p>
+            <div class="social-icons">
+              <a
+                href="https://www.linkedin.com/in/sathyanarayanan-ar-b912a716/?originalSubdomain=in"
+                class="social-icon"
+                target="_blank"
+                ><img src="video/linkdin.webp" alt=""
+              /></a>
+              <!-- <a href="#" class="social-icon">📷</a> -->
+            </div>
+          </div>
+
+          <div class="judge">
+            <div class="judge-image">
+              <img src="video/Eruditio.png" alt="Vzewl" />
+            </div>
+            <h2 class="judge-name">Mr Indrajit Ghosh</h2>
+            <p class="judge-title">Founder of Eruditio</p>
+            <div class="social-icons">
+              <a
+                href="https://www.linkedin.com/in/indrajeetg/?originalSubdomain=in"
+                class="social-icon"
+                target="_blank"
+                ><img src="video/linkdin.webp" alt=""
+              /></a>
+              <!-- <a href="#" class="social-icon">📷</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="faq">
+      <div class="container_3" id="faq">
+        <h1 class="faq-title">FAQ</h1>
+
+        <p class="intro-text">You've got questions, we've got answers!</p>
+        <p class="intro-text">
+          If you're still unsure about anything or have further questions, you
+          can always ask on our <a href="#" class="discord-link">Discord</a>.
+        </p>
+
+        <div class="faq-grid">
+          <div class="faq-card">
+            <div class="question">
+              Q: Can my vehicle be an airplane, a boat, a mount, or have no
+              engine at all?
+            </div>
+            <div class="answer">
+              Yes, we encourage all modes of transportation.
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <div class="question">Q: Does my vehicle have to do a jump?</div>
+            <div class="answer">
+              Yes, your vehicle should match the template's air time.
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <div class="question">Q: Does the jump have to be successful?</div>
+            <div class="answer">
+              Not necessarily, just as long your vehicle starts and ends with
+              the vehicle placeholder in the template.
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <div class="question">
+              Q: Can I change the scale/speed of the template to fit my scene?
+            </div>
+            <div class="answer">
+              Yes, but maintain the relative time between the lead-up, jump, and
+              landing.
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <div class="question">
+              Q: Can my vehicle enter or exit the frame during the animation?
+            </div>
+            <div class="answer">
+              That's okay, as long as it starts and ends like the template.
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <div class="question">Q: Can I add other vehicles?</div>
+            <div class="answer">
+              Totally, just make sure your main one is the focus.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <hr /> -->
+    <div class="schedule">
+      <div class="container_4" id="schedule">
+        <h1 class="title">SCHEDULE</h1>
+
+        <p class="subtitle">
+          Don't miss any updates. Check out the challenge schedule and add the
+          events to your calendar!
+        </p>
+
+        <div class="schedule-container">
+          <div class="timeline"></div>
+
+          <div class="event">
+            <div class="timeline-dot"></div>
+            <div class="event-content">
+              <div class="event-card">
+                <div class="event-info">
+                  <h3 class="event-title">SUBMISSION LINK LIVE</h3>
+                  <p class="event-date">Fri 5 September 2025</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="event">
+            <div class="timeline-dot"></div>
+            <div class="event-content">
+              <div class="event-card">
+                <div class="event-info">
+                  <h3 class="event-title">SUBMISSION OF THE IDEA</h3>
+                  <p class="event-date">Wed 10 September 2025</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="timeline-dot"></div>
+            <div class="event-content">
+              <div class="event-card">
+                <div class="event-info">
+                  <h3 class="event-title">PRESENT IN FRONT OF JURY</h3>
+                  <p class="event-date">Thu 11 August 2025</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact us"> 
+      <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-section">
+                    <h2>TechCorp</h2>
+                    <p>Empowering businesses through innovative technology solutions. We deliver cutting-edge software and digital experiences that drive growth and success.</p>
+                    <div class="social-icons">
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </div>
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                            </svg>
+                        </div>
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </div>
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="coordinators">
+                        <div class="coordinator-left">
+                            <h4>Student Coordinator</h4>
+                            <ul class="coordinator-list">
+                                <li>Aashi - 7024689911</li>
+                                <li>Shivansh Sharma - 7650895005</li>
+                                <li>Lokesh Sharma - 9729910323</li>
+                            </ul>
+                        </div>
+                        <div class="coordinator-right">
+                            <h4>Faculty Coordinator</h4>
+                            <ul class="coordinator-list">
+                                <li>DR. Gunjan Ansari</li>
+                                <li>DR. Ramraj Dangi</li>
+                                <li>DR. Sivabalan</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

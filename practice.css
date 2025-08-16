@@ -1,0 +1,797 @@
+/* Add this to the top of your CSS file */
+html {
+  scroll-behavior: smooth;
+}
+
+/* The rest of your CSS remains the same */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #0a0a0a, #1a1a1a),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><rect width="1920" height="1080" fill="%23111111"/><circle cx="300" cy="200" r="150" fill="%23222222" opacity="0.6"/><circle cx="800" cy="400" r="200" fill="%231a1a1a" opacity="0.4"/><circle cx="1200" cy="300" r="180" fill="%23333333" opacity="0.5"/><rect x="0" y="800" width="1920" height="280" fill="%23333333"/><path d="M0 800 Q480 750 960 800 T1920 800 L1920 1080 L0 1080 Z" fill="%23444444"/><ellipse cx="1600" cy="150" rx="80" ry="120" fill="%23666666" opacity="0.4"/><ellipse cx="1580" cy="130" rx="60" ry="90" fill="%23777777" opacity="0.3"/></svg>')
+      center/cover;
+  color: #e0e0e0;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Navigation */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(15px);
+  z-index: 1000;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.nav-item {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffd700;
+}
+
+/* Main Content - Modified for Background Video */
+.main-container {
+  padding-top: 100px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Add this to contain the video */
+}
+
+/* Background Video Styles */
+.bgvideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2; /* Behind everything including car placeholders */
+}
+
+/* Optional: Add overlay for better text readability */
+.main-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Car Placeholders - Updated z-index */
+.car-left,
+.car-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1; /* Above the overlay but below main content */
+}
+
+.car-left {
+  left: 5%;
+}
+
+.car-right {
+  right: 5%;
+}
+
+.car-placeholder {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Title - Enhanced for video background */
+.title {
+  font-size: 6rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.8); /* Enhanced shadow for better visibility over video */
+  position: relative;
+  z-index: 10;
+}
+
+.title .rampage {
+  color: #ffd700;
+  -webkit-text-stroke: 2px #ff4500;
+}
+
+.title .rally {
+  color: #4ecdc4;
+  -webkit-text-stroke: 2px #3aa8a1;
+}
+
+/* Challenge Info - Enhanced for video background */
+.challenge-info {
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 10;
+}
+
+.challenge-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: #ffd700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.challenge-info p {
+  font-size: 1.2rem;
+  color: #cccccc;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Countdown - Enhanced for video background */
+.countdown-section {
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 10;
+}
+
+.countdown-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffd700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.countdown-item {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 15px 20px;
+}
+
+.countdown-number {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  line-height: 1;
+}
+
+.countdown-label {
+  font-size: 1.2rem;
+  color: #cccccc;
+  font-weight: bold;
+}
+
+/* Get Started Button - Enhanced for video background */
+.get-started-btn {
+  background: linear-gradient(45deg, #ffd700, #ffa500);
+  color: #000000;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+  position: relative;
+  z-index: 10;
+}
+
+.get-started-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+}
+
+/* Submission Info - Enhanced for video background */
+.submission-info {
+  font-size: 1.1rem;
+  color: #cccccc;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  position: relative;
+  z-index: 10;
+}
+
+/* Bottom Actions - Enhanced for video background */
+.bottom-actions {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e0e0e0;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+.discord-icon {
+  width: 20px;
+  height: 20px;
+  background: #5865f2;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.rules-icon {
+  width: 20px;
+  height: 20px;
+  background: #ffd700;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+/* Scroll Indicator - Enhanced for video background */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 2rem;
+  animation: bounce 2s infinite;
+  z-index: 10;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 4rem;
+  }
+
+  .nav-container {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .countdown-container {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .countdown-number {
+    font-size: 3rem;
+  }
+
+  .nav-container {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .nav-item {
+    font-size: 14px;
+  }
+
+  .bottom-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Enhanced mobile overlay for better readability */
+  .main-container::before {
+    background: rgba(0, 0, 0, 0.5); /* Darker overlay on mobile */
+  }
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Guidelines Section */
+.guidelines-section {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.guidelines-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ffd700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin-bottom: 40px;
+  transform: skew(-5deg);
+}
+
+.guidelines-text {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #cccccc;
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Rules Section */
+.rules-section {
+  margin-bottom: 60px;
+}
+
+.rules-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #ffd700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin-bottom: 40px;
+  text-align: center;
+  transform: skew(-5deg);
+}
+
+.rules-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.rules-list {
+  list-style: none;
+}
+
+.rule-item {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.rule-item:hover {
+  background: rgba(0, 0, 0, 0.8);
+  border-color: rgba(255, 215, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.rule-number {
+  display: inline-block;
+  background: #ffd700;
+  color: #000000;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+.rule-text {
+  display: inline;
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+.rule-link {
+  color: #4ecdc4;
+  text-decoration: underline;
+}
+
+.rule-link:hover {
+  color: #6eddd6;
+}
+
+.video-icon {
+  float: right;
+  width: 20px;
+  height: 20px;
+  background: #ff4444;
+  border-radius: 3px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.video-icon::after {
+  content: "▶";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 10px;
+}
+
+/* Video Section */
+.video-section {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  position: sticky;
+  top: 20px;
+}
+
+.rule-preview-title {
+  font-size: 1.2rem;
+  color: #ffd700;
+  margin-bottom: 5px;
+}
+
+.rule-preview-subtitle {
+  font-size: 0.9rem;
+  color: #4ecdc4;
+  margin-bottom: 20px;
+}
+
+.video-container {
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-placeholder {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.template-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e0e0e0;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+}
+
+.video-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #1a1a1a;
+  height: 40px;
+}
+
+.video-left {
+  background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.video-right {
+  background: linear-gradient(135deg, #4ecdc4, #6eddd6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.video-progress {
+  background: #333333;
+  height: 4px;
+  position: relative;
+}
+
+.progress-bar {
+  background: #4ecdc4;
+  height: 100%;
+  width: 3%;
+}
+
+.video-timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  background: #0a0a0a;
+  font-size: 0.7rem;
+  color: #888888;
+}
+
+.video-example-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #cccccc;
+  text-align: justify;
+}
+
+/* Get Started Section */
+.get-started-section {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.prizes-info {
+  font-size: 1rem;
+  color: #cccccc;
+  margin-bottom: 40px;
+}
+
+/* Container with dark background for better separation */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 120px 20px 40px;
+}
+
+/* Prizes Title */
+.prizes-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ffd700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin-bottom: 60px;
+  text-align: center;
+  transform: skew(-5deg);
+}
+
+/* Sponsors Left */
+.sponsors-left {
+  position: fixed;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 100;
+}
+
+.sponsor-logo {
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffd700;
+  font-weight: bold;
+  font-size: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.sponsor-logo:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.rokoko-logo {
+  background: #1a1a1a;
+  border-color: #333333;
+  color: #e0e0e0;
+}
+
+.xdpen-logo {
+  background: #000000;
+  border-color: #4ecdc4;
+  color: #4ecdc4;
+}
+
+.janga-logo {
+  background: #0a0a1a;
+  border-color: #4ecdc4;
+  color: #4ecdc4;
+}
+
+.marvelous-logo {
+  background: #2a1a0a;
+  border-color: #ff6b35;
+  color: #ff6b35;
+}
+
+.gnomon-logo {
+  background: #1a1a1a;
+  border-color: #ffd700;
+  color: #ffd700;
+}
+
+.renderfarm-logo {
+  background: #2a0a0a;
+  border-color: #ff4757;
+  color: #ff4757;
+}
+
+.rokoko-bottom {
+  background: #1a1a1a;
+  border-color: #333333;
+  color: #e0e0e0;
+}
+
+.xdpen-bottom {
+  background: #000000;
+  border-color: #4ecdc4;
+  color: #4ecdc4;
+}
+
+.janga-bottom {
+  background: #0a0a1a;
+  border-color: #4ecdc4;
+  color: #4ecdc4;
+}
+
+.atom-bottom {
+  background: #1a1a1a;
+  border-color: #333333;
+  color: #e0e0e0;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .sponsors-left {
+    display: none;
+  }
+
+  .prize-tiers {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .rules-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .video-section {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .guidelines-title,
+  .rules-title {
+    font-size: 2.5rem;
+  }
+
+  .container {
+    padding: 20px 15px;
+  }
+
+  .rule-item {
+    padding: 15px;
+  }
+
+  .video-placeholder {
+    height: 150px;
+  }
+
+  .prize-tiers {
+    grid-template-columns: 1fr;
+  }
+
+  .prizes-title,
+  .special-awards-title {
+    font-size: 2.5rem;
+  }
+
+  .bottom-sponsors {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .nav-container {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .nav-item {
+    font-size: 14px;
+  }
+}
+
+/* Additional Dark Mode Enhancements */
+::selection {
+  background: rgba(255, 215, 0, 0.3);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444444;
+}

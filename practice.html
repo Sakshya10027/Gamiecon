@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rampage Rally</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="Home">
+      <nav class="nav-bar">
+        <div class="nav-container">
+          <a href="#rules" class="nav-item">RULES</a>
+          <a href="#" class="nav-item">GUESTS</a>
+          <a href="#" class="nav-item">Home</a>
+          <a href="#" class="nav-item">FAQ</a>
+          <a href="#" class="nav-item">SCHEDULE</a>
+        </div>
+      </nav>
+
+      <main id="home" class="main-container">
+        <video class="bgvideo" width="400" height="300" autoplay loop muted>
+          <source src="video/vid.mp4" type="video/mp4" />
+        </video>
+        <h1 class="title"><span class="rampage">Gamiecon</span><br /></h1>
+
+        <div class="challenge-info">
+          <h3>Student Game Pitch Challenge</h3>
+          <p>July - September 2025</p>
+        </div>
+
+        <div class="countdown-section">
+          <h2 class="countdown-title">CHALLENGE ENDS IN</h2>
+          <div class="countdown-container">
+            <div class="countdown-item">
+              <div class="countdown-number" id="days">20</div>
+              <div class="countdown-label">DAYS</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-number" id="hours">00</div>
+              <div class="countdown-label">HRS</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-number" id="minutes">49</div>
+              <div class="countdown-label">MIN</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-number" id="seconds">00</div>
+              <div class="countdown-label">SEC</div>
+            </div>
+          </div>
+        </div>
+
+        <a href="https://forms.gle/JoB4ezwEB4DeGL3eA" class="get-started-btn"
+          >GET STARTED!</a
+        >
+
+        <p class="submission-info">
+          Submission link will be available in <strong>3 days, 10 hours</strong>
+        </p>
+
+        <div class="bottom-actions">
+          <a href="#rules" class="action-btn">
+            <span class="rules-icon"></span>
+            Read the Rules
+          </a>
+          <a href="#" class="action-btn">
+            Join Discord
+            <span class="discord-icon"></span>
+          </a>
+        </div>
+
+        <div class="scroll-indicator">⌄</div>
+      </main>
+    </div>
+    <div class="Rules">
+      <div class="container" id="rules">
+        <section class="guidelines-section">
+          <h1 class="guidelines-title">GUIDELINES</h1>
+          <div class="guidelines-text">
+            <p>
+              Start your engines and join the Rampage Rally, our next
+              vehicle-based 3D Community Challenge. We challenge you to use the
+              provided template as a blueprint to drive your own unique creation
+              over the next 30 days.
+            </p>
+          </div>
+          <div class="guidelines-text">
+            <p>
+              Your art will be judged on
+              <strong
+                >idea/story, lighting & render quality, composition, and
+                animation</strong
+              >. Follow the rules below to guarantee your place in the "All
+              Renders" Community Montage, or push for a spot in the curated Top
+              100 Montage.
+            </p>
+          </div>
+          <div class="guidelines-text">
+            <p>
+              <strong
+                >Good luck, have fun and we'll see you at the finish
+                line!</strong
+              >
+            </p>
+          </div>
+        </section>
+
+        <section class="rules-section">
+          <h2 class="rules-title">RULES</h2>
+
+          <div class="rules-container">
+            <div class="rules-left">
+              <ul class="rules-list">
+                <li class="rule-item">
+                  <span class="rule-number">01</span>
+                  <span class="rule-text"
+                    >Replace the Vehicle Proxy with your own vehicle.</span
+                  >
+                  <div class="video-icon"></div>
+                </li>
+
+                <li class="rule-item">
+                  <span class="rule-number">02</span>
+                  <span class="rule-text"
+                    >Jump the provided gap with your vehicle.</span
+                  >
+                  <div class="video-icon"></div>
+                </li>
+
+                <li class="rule-item">
+                  <span class="rule-number">03</span>
+                  <span class="rule-text"
+                    >Maintain the sense of speed and direction.</span
+                  >
+                  <div class="video-icon"></div>
+                </li>
+
+                <li class="rule-item">
+                  <span class="rule-number">04</span>
+                  <span class="rule-text"
+                    >Use the provided camera (<a href="#" class="rule-link"
+                      >more info</a
+                    >).</span
+                  >
+                  <div class="video-icon"></div>
+                </li>
+
+                <li class="rule-item">
+                  <span class="rule-number">05</span>
+                  <span class="rule-text"
+                    >One submission per artist, one artist per submission.</span
+                  >
+                </li>
+
+                <li class="rule-item">
+                  <span class="rule-number">06</span>
+                  <span class="rule-text"
+                    >You must follow the technical specifications (Name rule,
+                    resolution, frame count, file type, codex, file size)</span
+                  >
+                </li>
+
+                <li class="rule-item">
+                  <span class="rule-number">07</span>
+                  <span class="rule-text"
+                    >No generative AI is allowed. (<a href="#" class="rule-link"
+                      >more info</a
+                    >).</span
+                  >
+                </li>
+
+                <li class="rule-item">
+                  <span class="rule-number">08</span>
+                  <span class="rule-text"
+                    >Submit by Monday 1 September 2025 at 12:29 GMT+5:30 (+ 2
+                    weeks, 6 days)</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
