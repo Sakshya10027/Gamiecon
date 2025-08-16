@@ -33,7 +33,6 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-// Smooth scrolling for Home & Rules links
 document
   .querySelectorAll('a[href="#home"], a[href="#rules"]')
   .forEach((anchor) => {
@@ -44,7 +43,6 @@ document
     });
   });
 
-// Hover effects on rule items
 document.querySelectorAll(".rule-item").forEach((item) => {
   const videoIcon = item.querySelector(".video-icon");
   item.addEventListener("mouseenter", () => {
@@ -55,7 +53,6 @@ document.querySelectorAll(".rule-item").forEach((item) => {
   });
 });
 
-// Simulate video progress
 let progress = 3;
 setInterval(() => {
   progress += 0.1;
@@ -64,7 +61,6 @@ setInterval(() => {
   if (bar) bar.style.width = progress + "%";
 }, 100);
 
-// Sponsor logo click animation
 document
   .querySelectorAll(".sponsor-logo, .sponsor-logo-bottom")
   .forEach((logo) => {
@@ -75,7 +71,7 @@ document
       }, 150);
     });
   });
-///////////////////////////
+
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -95,7 +91,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Add subtle animation on page load
 window.addEventListener("load", function () {
   const cards = document.querySelectorAll(".faq-card");
   cards.forEach((card, index) => {
@@ -110,7 +105,6 @@ window.addEventListener("load", function () {
   });
 });
 
-// Add interactive hover effects
 document.querySelectorAll(".faq-card").forEach((card) => {
   card.addEventListener("mouseenter", function () {
     this.style.borderColor = "#ff6b35";
@@ -127,14 +121,12 @@ function createGameThumbnail(canvasId, primaryColor, secondaryColor, title) {
   const canvas = document.getElementById(canvasId);
   const ctx = canvas.getContext("2d");
 
-  // Background gradient
   const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
   gradient.addColorStop(0, primaryColor);
   gradient.addColorStop(1, secondaryColor);
   ctx.fillStyle = gradient;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  // Add some geometric shapes for gaming feel
   ctx.fillStyle = "rgba(255, 255, 255, 0.2)";
   ctx.fillRect(20, 20, 100, 60);
   ctx.fillRect(280, 120, 80, 60);
@@ -148,7 +140,6 @@ function createGameThumbnail(canvasId, primaryColor, secondaryColor, title) {
   ctx.arc(320, 60, 30, 0, Math.PI * 2);
   ctx.fill();
 
-  // Add title if provided
   if (title) {
     ctx.fillStyle = "white";
     ctx.font = "bold 24px Arial";
@@ -157,7 +148,6 @@ function createGameThumbnail(canvasId, primaryColor, secondaryColor, title) {
   }
 }
 
-// Resize canvases and create thumbnails for each event
 document.querySelectorAll("canvas").forEach((canvas) => {
   canvas.width = 350;
   canvas.height = 160;
