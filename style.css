@@ -457,7 +457,7 @@ html {
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 120px 20px 40px;
+  padding: 40px 20px 40px;
 }
 
 .prizes-title {
@@ -648,88 +648,104 @@ html {
   background: #444444;
 }
 
+.aboutgamiecon {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 200px;
+  justify-content: center;
+}
+
 .title_2 {
-  font-size: 72px;
+  font-size: clamp(24px, 6vw, 56px);
   font-weight: bold;
   color: #ffd700;
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   letter-spacing: 2px;
 }
 
 .content-box_2 {
-  background-color: black;
-  border: 1px solid #333;
-  border-radius: 8px;
-  margin-left: 400px;
+  background: black;
+  border: 2px solid #333;
+  border-radius: 12px;
   padding: 40px;
+  width: 100%;
   max-width: 800px;
   text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .description_2 {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #ccc;
+  font-size: clamp(14px, 2.5vw, 18px);
+  line-height: 1.8;
+  color: #e0e0e0;
+  font-weight: 300;
 }
 
-/* Tablet styles */
 @media (max-width: 1024px) {
+  .aboutgamiecon {
+    padding: 30px 15px;
+  }
+
   .content-box_2 {
-    margin-left: 200px;
-    max-width: 700px;
+    padding: 35px;
   }
 }
 
-/* Small tablet/large phone styles */
 @media (max-width: 768px) {
+  .aboutgamiecon {
+    padding: 20px 15px;
+  }
+
   .title_2 {
-    font-size: 48px;
-    margin-bottom: 40px;
-  }
-
-  .content-box_2 {
-    margin-left: 50px;
-    margin-right: 50px;
-    padding: 30px;
-    max-width: none;
-  }
-
-  .description_2 {
-    font-size: 16px;
-  }
-}
-
-/* Mobile styles */
-@media (max-width: 480px) {
-  .title_2 {
-    font-size: 36px;
     margin-bottom: 30px;
     letter-spacing: 1px;
   }
 
   .content-box_2 {
-    margin-left: 20px;
-    margin-right: 20px;
+    padding: 25px;
+    border-radius: 8px;
+  }
+
+  .description_2 {
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutgamiecon {
+    padding: 15px 10px;
+  }
+
+  .content-box_2 {
     padding: 20px;
   }
 
   .description_2 {
-    font-size: 14px;
     line-height: 1.5;
   }
 }
 
-/* Extra small mobile styles */
 @media (max-width: 320px) {
-  .title_2 {
-    font-size: 28px;
+  .aboutgamiecon {
+    padding: 10px 5px;
   }
 
   .content-box_2 {
-    margin-left: 10px;
-    margin-right: 10px;
     padding: 15px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .aboutgamiecon {
+    padding: 60px 20px;
+  }
+
+  .content-box_2 {
+    padding: 50px;
   }
 }
