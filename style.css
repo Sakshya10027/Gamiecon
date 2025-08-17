@@ -384,8 +384,10 @@ html {
 }
 
 .rules-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  display: flex;
+  justify-content: center;
   gap: 40px;
   align-items: start;
 }
@@ -399,9 +401,11 @@ html {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   padding: 20px;
+  max-width: 900px;
   margin-bottom: 15px;
   position: relative;
   transition: all 0.3s ease;
+  margin-right: auto;
 }
 
 .rule-item:hover {
