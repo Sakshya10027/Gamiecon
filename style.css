@@ -749,3 +749,19 @@ html {
     padding: 50px;
   }
 }
+
+.inex{
+  font-family: "Orbitron", monospace;
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #ff6b35, #f7931e, #ffdd00, #ff6b35);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 80px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 0 0 30px rgba(255, 107, 53, 0.3);
+  /* animation: gradientShift 3s ease-in-out infinite; */
+}
